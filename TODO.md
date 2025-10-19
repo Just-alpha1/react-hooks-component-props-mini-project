@@ -1,0 +1,6 @@
+- [x] Create Header.js component
+- [x] Create About.js component
+- [x] Create ArticleList.js component
+- [x] Create Article.js component with bonus minutes to read
+- [x] Update App.js to render the components with props
+- [x] Run npm start to test in browser
