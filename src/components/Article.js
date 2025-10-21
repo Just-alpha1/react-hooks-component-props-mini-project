@@ -1,22 +1,23 @@
 import React from "react";
 
 function Article({ title, date = "January 1, 1970", preview, minutes }) {
+  // BONUS FEATURE: minutes to read
   let emoji = "";
   if (minutes < 30) {
     const cups = Math.ceil(minutes / 5);
     emoji = "☕️".repeat(cups);
   } else {
-    const bento = Math.ceil(minutes / 10);
-    emoji = "🍱".repeat(bento);
+    const bentos = Math.ceil(minutes / 10);
+    emoji = "🍱".repeat(bentos);
   }
-  const readTime = `${emoji} ${minutes} min read`;
 
   return (
     <article>
       <h3>{title}</h3>
-      <small>{date}</small>
+      <small>
+        {date} • {emoji} {minutes} min read
+      </small>
       <p>{preview}</p>
-      <small>{readTime}</small>
     </article>
   );
 }
